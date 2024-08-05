@@ -1,0 +1,11 @@
+services:
+  mongodb:
+    image: mongo:5.0
+    container_name: manga-lib
+    env_file:
+      - .docker.env
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongodb:/data/db
+    
